@@ -1,13 +1,15 @@
-#spring:
-#  application:
-#    name: gateway
-#  cloud:
-#    config:
-#      uri: http://${CONFIG_SERVER}:${CONFIG_SERVER_PORT}
-#      fail-fast: true
-#      password: ${CONFIG_SERVICE_PASSWORD}
-#      username: user
-
+app:
+  id: gateway-service                            #应用ID
+apollo:
+  cacheDir: /opt/data/                       #配置本地配置缓存目录
+  cluster: default                           #指定使用哪个集群的配置
+  meta: http://config.wzxmt.com            #DEV环境配置中心地址
+  autoUpdateInjectedSpringProperties: true   #是否开启 Spring 参数自动更新
+  bootstrap:                                
+    enabled: true                            #是否开启 Apollo
+    namespaces: application                  #设置 Namespace
+    eagerLoad:
+      enabled: false                         #将 Apollo 加载提到初始化日志系统之前
 spring:
   application:
     name: gateway-server
