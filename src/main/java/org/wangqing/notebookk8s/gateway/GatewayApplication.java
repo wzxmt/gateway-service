@@ -14,11 +14,10 @@ public class GatewayApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(GatewayApplication.class, args);
 	}
+}
 @EnableApolloConfig
 public class SpringbootApolloApplication {
 　　public static void main(String[] args) {
 　　　　SpringApplication.run(SpringbootApolloApplication.class, args);
 　　}
-}
-
 }
