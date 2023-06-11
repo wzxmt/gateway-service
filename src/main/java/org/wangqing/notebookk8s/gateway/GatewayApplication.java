@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableZuulProxy
 @RestController
+@EnableApolloConfig
 
 public class GatewayApplication {
 
@@ -15,7 +16,6 @@ public class GatewayApplication {
 		SpringApplication.run(GatewayApplication.class, args);
 	}
 }
-@EnableApolloConfig
 public class SpringbootApolloApplication {
 　　public static void main(String[] args) {
 　　　　SpringApplication.run(SpringbootApolloApplication.class, args);
